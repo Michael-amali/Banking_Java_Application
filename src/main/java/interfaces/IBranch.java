@@ -1,6 +1,6 @@
-package _interface;
+package interfaces;
 
-import _class.Customer;
+import classes.Customer;
 
 import java.util.ArrayList;
 

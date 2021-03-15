@@ -1,6 +1,6 @@
-package _interface;
+package interfaces;
 
-import _class.Branch;
+import classes.Branch;
 
 public interface IBank {
 

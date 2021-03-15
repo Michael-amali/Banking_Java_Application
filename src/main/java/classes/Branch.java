@@ -1,6 +1,6 @@
-package _class;
+package classes;
 
-import _interface.IBranch;
+import interfaces.IBranch;
 
 import java.util.ArrayList;
 

@@ -1,6 +1,6 @@
-package _class;
+package classes;
 
-import _interface.IBank;
+import interfaces.IBank;
 
 import java.util.ArrayList;
 
