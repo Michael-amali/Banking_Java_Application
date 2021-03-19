@@ -37,7 +37,6 @@ public class Branch implements IBranch {
     @Override
     public boolean addCustomerTransaction(String customerName, double transaction) {
         // if customer already exists then, we can obtain his/her info and add it to the transaction list
-        // NOT SURE OF THIS IMPLEMENTATION....
         Customer checkedCustomer = findCustomer(customerName);
         if(checkedCustomer != null){
             findCustomer(customerName).addTransaction(transaction);
@@ -46,8 +45,8 @@ public class Branch implements IBranch {
         return false;
     }
 
-    @Override               //it must be made PRIVATE per the instructions so remove from IBranch interface
-    public Customer findCustomer(String customerName) {
+    //it must be made PRIVATE per the instructions so remove from IBranch interface
+    private Customer findCustomer(String customerName) {
 
         for(Customer customer: customers){
             if(customer.getName().equals(customerName)){

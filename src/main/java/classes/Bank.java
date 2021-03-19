@@ -15,7 +15,7 @@ public class Bank implements IBank  {
     }
 
     @Override
-    public boolean addBranch(String branchName) {      // it must be made PRIVATE per the instructions
+    public boolean addBranch(String branchName) {
         // if it's equal to null, then it does not exist so you need to add it
         if(findBranch(branchName) == null){
             branches.add(new Branch(branchName));
@@ -29,7 +29,6 @@ public class Bank implements IBank  {
     public boolean addCustomer(String branchName, String customerName, double initialTransaction) {
 
         Branch checkedBranch = findBranch(branchName);
-
         if(checkedBranch != null){
             return findBranch(branchName).newCustomer(customerName, initialTransaction);
         }
@@ -48,15 +47,14 @@ public class Bank implements IBank  {
         return false;
     }
 
-    @Override                //it must be made PRIVATE per the instructions so remove from IBank interface
-    public Branch findBranch(String branchName) {
+   //make it PRIVATE so remove from IBank interface,
+    private Branch findBranch(String branchName) {
 
         for (Branch branch : branches) {
             if (branch.getName().equals(branchName)) {
                 return branch;
             }
         }
-
         return null;
     }
 
